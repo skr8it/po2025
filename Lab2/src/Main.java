@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Arrays;
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Random r = new Random();
@@ -46,8 +47,10 @@ public class Main {
 
             }
             for (int j = 0; j < 6; j++) {
-                if (newnumbers[j] == numbers[j]) {
+                for (int k = 0; k <= 5; k++) {
+                    if (newnumbers[j] == numbers[k]) {
                     numsum++;
+                    }
                 }
             }
         }
