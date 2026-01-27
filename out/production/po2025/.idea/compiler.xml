@@ -6,10 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="samGUI" />
-        <module name="SamochodGUI" />
         <module name="CarApp" />
         <module name="symulator" />
+        <module name="samGUI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

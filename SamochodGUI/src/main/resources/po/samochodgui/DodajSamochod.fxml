@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="po.samochodgui.DodajSamochodController">
+    <content>
+        <VBox spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="KREATOR NOWEGO SAMOCHODU" />
+
+                <HBox spacing="20.0">
+                    <children>
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Model samochodu" />
+                                <TextField fx:id="modelTextField" promptText="np. Golf" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Numer rejestracyjny" />
+                                <TextField fx:id="registrationTextField" promptText="np. KR 12345" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="V-Max (km/h)" />
+                                <TextField fx:id="speedTextField" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <Separator />
+
+                <GridPane hgap="20.0" vgap="15.0">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="33.0" />
+                        <ColumnConstraints percentWidth="33.0" />
+                        <ColumnConstraints percentWidth="33.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <VBox spacing="8.0" GridPane.columnIndex="0">
+                            <children>
+                                <Label style="-fx-font-weight: bold;" text="1. SILNIK" />
+                                <ComboBox fx:id="engineComboBox" maxWidth="1.7976931348623157E308" promptText="Wybierz gotowy..." />
+                                <Label text="Nazwa" /> <TextField fx:id="engineNameField" />
+                                <Label text="Model" /> <TextField fx:id="engineModelField" />
+                                <Label text="Producent" /> <TextField fx:id="engineProducerField" />
+                                <Label text="Waga (kg)" /> <TextField fx:id="engineWeightField" />
+                                <Label text="Cena" /> <TextField fx:id="enginePriceField" />
+                                <Label text="Max Obroty" /> <TextField fx:id="engineMaxRevField" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="8.0" GridPane.columnIndex="1">
+                            <children>
+                                <Label style="-fx-font-weight: bold;" text="2. SKRZYNIA" />
+                                <ComboBox fx:id="gearboxComboBox" maxWidth="1.7976931348623157E308" promptText="Wybierz gotową..." />
+                                <Label text="Nazwa" /> <TextField fx:id="gearboxNameField" />
+                                <Label text="Model" /> <TextField fx:id="gearboxModelField" />
+                                <Label text="Producent" /> <TextField fx:id="gearboxProducerField" />
+                                <Label text="Waga (kg)" /> <TextField fx:id="gearboxWeightField" />
+                                <Label text="Cena" /> <TextField fx:id="gearboxPriceField" />
+                                <Label text="Ilość biegów" /> <TextField fx:id="gearsCountField" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="8.0" GridPane.columnIndex="2">
+                            <children>
+                                <Label style="-fx-font-weight: bold;" text="3. SPRZĘGŁO" />
+                                <ComboBox fx:id="clutchComboBox" maxWidth="1.7976931348623157E308" promptText="Wybierz gotowe..." />
+                                <Label text="Nazwa" /> <TextField fx:id="clutchNameField" />
+                                <Label text="Model" /> <TextField fx:id="clutchModelField" />
+                                <Label text="Producent" /> <TextField fx:id="clutchProducerField" />
+                                <Label text="Waga (kg)" /> <TextField fx:id="clutchWeightField" />
+                                <Label text="Cena" /> <TextField fx:id="clutchPriceField" />
+                            </children>
+                        </VBox>
+                    </children>
+                </GridPane>
+
+                <HBox alignment="CENTER" spacing="20.0" style="-fx-padding: 10 0 0 0;">
+                    <children>
+                        <Button fx:id="confirmButton" onAction="#onConfirmButton" prefWidth="150.0" style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-font-weight: bold;" text="ZŁÓŻ POJAZD" />
+                        <Button onAction="#onCancelButton" prefWidth="100.0" text="Anuluj" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </content>
+</ScrollPane>
